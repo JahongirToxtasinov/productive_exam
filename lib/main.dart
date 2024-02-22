@@ -1,12 +1,14 @@
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:productive_exam/features/tasks/data/repository/repo.dart';
 import 'package:productive_exam/firebase_options.dart';
 
 import 'assets/constants/routes/app_routes.dart';
 import 'assets/theme/theme.dart';
 import 'features/authentication/presentation/bloc/authentication_bloc.dart';
 import 'features/home/bloc/tab_bar_bloc.dart';
+import 'features/tasks/presentation/bloc/tasks_bloc.dart';
 
 Future<void> main() async{
   WidgetsFlutterBinding.ensureInitialized();
@@ -35,6 +37,8 @@ class _AppState extends State<App> {
           BlocProvider(
             create: (context) => AuthenticatedBloc(),
           ),
+          BlocProvider(
+              create: (context) => TasksBloc()),
 
         ],
       child : MaterialApp(

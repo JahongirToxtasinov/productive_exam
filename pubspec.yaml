@@ -33,6 +33,7 @@ flutter:
     - assets/
     - assets/fonts/
     - assets/icons/
+    - assets/icons/tasks/
     - assets/icons/nav_bar/
     - assets/images/
   fonts:
